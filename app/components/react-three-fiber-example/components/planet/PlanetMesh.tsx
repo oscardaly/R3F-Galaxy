@@ -86,4 +86,3 @@ const Ecliptic = ({xRadius = 1, zRadius = 1}) => {
         </line>
     );
 }
-
