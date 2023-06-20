@@ -7,16 +7,14 @@ The objective of this workshop is to provide an introductory overview of buildin
 ## Exercises
 
 1. Introduction to Three.js (30 minutes)
-
 - Overview of Three.js and its role in creating 3D web applications
 - Explanation of key concepts such as scenes, cameras, and renderers
 - Demonstrating a simple Three.js scene with basic shapes and materials
 - Understanding how to manipulate and animate objects in Three.js
 - Introduction to available resources and documentation for further learning
-- Building a Simple 3D Scene with React-Three-Fiber (30 minutes)
 
-2. Introduction to React-Three-Fiber and its benefits for creating 3D web applications
-
+2. Building a Simple 3D Scene with React-Three-Fiber (30 minutes)
+- Introduction to React-Three-Fiber and its benefits for creating 3D web applications
 - Setting up a React project with React-Three-Fiber
 - Creating a basic 3D scene using React-Three-Fiber components
 - Adding interactivity and animation to the scene
@@ -24,11 +22,9 @@ The objective of this workshop is to provide an introductory overview of buildin
 - Recommended resources for further learning
 
 3. Open discussion and Q&A session to address participants' questions
-
 - Recap of the key concepts covered in the workshop
 - Suggestions and next steps for participants to continue their learning journey
 - Feedback and closing remarks
-
 
 ## Getting Started
 
