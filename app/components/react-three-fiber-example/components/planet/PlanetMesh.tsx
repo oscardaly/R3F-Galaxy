@@ -1,10 +1,11 @@
-import React, {FC, useCallback, useState} from "react";
+import React, {FC, useCallback, useState, useRef} from "react";
 import {useFrame} from "@react-three/fiber";
 import {Edges, Html} from "@react-three/drei";
 import * as THREE from "three";
 import {Planet} from "@/app/components/react-three-fiber-example/components/planet/types/Planet";
 import {OnClick} from "@/app/components/react-three-fiber-example/components/planet/types/Callbacks";
 import {Select} from "@react-three/postprocessing";
+import {Mesh} from "three";
 
 interface PlanetProps extends Planet {
     onClick?: OnClick;
@@ -23,7 +24,7 @@ export const PlanetMesh: FC<PlanetProps> = (
 ) => {
     const [hovered, setHovered] = useState<boolean>(false);
     const planetRadius = planetPosition * 4;
-    const planetRef = React.useRef<>();
+    const planetRef = useRef<Mesh>(null!);
 
     useFrame(({clock}) => {
         if (!hovered) {
