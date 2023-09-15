@@ -60,7 +60,7 @@ export const ReactThreeFiberExample = () => {
                 <Lights/>
                 <Selection>
                     <EffectComposer multisampling={8} autoClear={false}>
-                        <Outline blur visibleEdgeColor="white" edgeStrength={100} width={5000}/>
+                        <Outline blur visibleEdgeColor={0xffffff} edgeStrength={100} width={5000}/>
                     </EffectComposer>
                     <Sun/>
                     <PlanetMesh {...planets.mercury} onClick={setSelected}/>
