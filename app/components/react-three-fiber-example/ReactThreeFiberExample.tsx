@@ -14,7 +14,7 @@ import {Seat} from "@/app/components/react-three-fiber-example/components/planet
 const Floor = () => {
     return (
         <mesh rotation={[-Math.PI / 2, 0, 0]}>
-            <planeBufferGeometry attach="geometry" args={[150, 250]}/>
+            <planeGeometry attach="geometry" args={[150, 250]}/>
             <meshLambertMaterial attach="material" color="white"/>
         </mesh>
     );
@@ -23,7 +23,7 @@ const Floor = () => {
 const RightWall = () => {
     return (
         <mesh rotation={[0, Math.PI / 2, 0]} position={[-75, 25, 0]}>
-            <planeBufferGeometry attach="geometry" args={[250, 50]}/>
+            <planeGeometry attach="geometry" args={[250, 50]}/>
             <meshLambertMaterial attach="material" color="white"/>
         </mesh>
     );
@@ -32,7 +32,7 @@ const RightWall = () => {
 const LeftWall = () => {
     return (
         <mesh rotation={[0, 0, 0]} position={[0, 25, -125]}>
-            <planeBufferGeometry attach="geometry" args={[150, 50]}/>
+            <planeGeometry attach="geometry" args={[150, 50]}/>
             <meshLambertMaterial attach="material" color="white"/>
         </mesh>
     );
@@ -42,7 +42,7 @@ const Lights = () => {
     return (
         <>
             <Stars/>
-            <ambientLight intensity={0.5}/>
+            <ambientLight intensity={3}/>
             <pointLight position={[0, 0, 0]}/>
         </>
     );
