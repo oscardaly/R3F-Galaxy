@@ -30,9 +30,11 @@ const TableRow: FC<TableRowProps> = ({onClick}) => {
             {
                 array.map(number => {
                     faceForward = number.x === -50 || number.x === -10 || number.x === 30;
-                    return <SeatMesh location={number}
-                                     faceForward={faceForward}
-                                     onClick={onClick}
+                    return <SeatMesh
+                        key={array.indexOf(number)}
+                        location={number}
+                        faceForward={faceForward}
+                        onClick={onClick}
                     />
                 })
             }
