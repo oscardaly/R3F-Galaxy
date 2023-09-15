@@ -15,7 +15,7 @@ const Floor = () => {
     return (
         <mesh rotation={[-Math.PI / 2, 0, 0]}>
             <planeGeometry attach="geometry" args={[150, 250]}/>
-            <meshLambertMaterial attach="material" color="white"/>
+            <meshBasicMaterial attach="material" color="white"/>
         </mesh>
     );
 }
@@ -24,7 +24,7 @@ const RightWall = () => {
     return (
         <mesh rotation={[0, Math.PI / 2, 0]} position={[-75, 25, 0]}>
             <planeGeometry attach="geometry" args={[250, 50]}/>
-            <meshLambertMaterial attach="material" color="white"/>
+            <meshBasicMaterial attach="material" color="white"/>
         </mesh>
     );
 }
@@ -33,7 +33,7 @@ const LeftWall = () => {
     return (
         <mesh rotation={[0, 0, 0]} position={[0, 25, -125]}>
             <planeGeometry attach="geometry" args={[150, 50]}/>
-            <meshLambertMaterial attach="material" color="white"/>
+            <meshBasicMaterial attach="material" color="white"/>
         </mesh>
     );
 }
