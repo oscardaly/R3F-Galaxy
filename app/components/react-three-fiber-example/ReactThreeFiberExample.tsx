@@ -3,10 +3,6 @@ import React, {useState} from 'react'
 import {Canvas} from '@react-three/fiber'
 import {OrbitControls, Stars} from '@react-three/drei'
 import {Selection, EffectComposer, Outline} from '@react-three/postprocessing'
-
-import {planets} from "@/app/components/react-three-fiber-example/types/Planets";
-import {Planet} from "@/app/components/react-three-fiber-example/components/planet/types/Planet";
-
 import {
     Button,
 } from "@material-tailwind/react";
@@ -14,7 +10,6 @@ import {RocketLaunchIcon} from "@heroicons/react/24/solid";
 import {ArrowLongRightIcon} from "@heroicons/react/24/outline";
 import TableRow from "@/app/components/react-three-fiber-example/components/TableRow";
 import {Seat} from "@/app/components/react-three-fiber-example/components/planet/types/Seat";
-import TableBlock from "@/app/components/react-three-fiber-example/components/TableBlock";
 
 const Floor = () => {
     return (
