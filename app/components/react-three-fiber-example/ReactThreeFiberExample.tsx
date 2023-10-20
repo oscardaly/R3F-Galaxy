@@ -11,32 +11,7 @@ import {ArrowLongRightIcon} from "@heroicons/react/24/outline";
 import TableRow from "@/app/components/react-three-fiber-example/components/TableRow";
 import {Seat} from "@/app/components/react-three-fiber-example/components/planet/types/Seat";
 
-const Floor = () => {
-    return (
-        <mesh rotation={[-Math.PI / 2, 0, 0]}>
-            <planeGeometry attach="geometry" args={[150, 250]}/>
-            <meshBasicMaterial attach="material" color="white"/>
-        </mesh>
-    );
-}
 
-const RightWall = () => {
-    return (
-        <mesh rotation={[0, Math.PI / 2, 0]} position={[-75, 25, 0]}>
-            <planeGeometry attach="geometry" args={[250, 50]}/>
-            <meshBasicMaterial attach="material" color="white"/>
-        </mesh>
-    );
-}
-
-const LeftWall = () => {
-    return (
-        <mesh rotation={[0, 0, 0]} position={[0, 25, -125]}>
-            <planeGeometry attach="geometry" args={[150, 50]}/>
-            <meshBasicMaterial attach="material" color="white"/>
-        </mesh>
-    );
-}
 
 const Lights = () => {
     return (
