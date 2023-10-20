@@ -38,7 +38,7 @@ export const ReactThreeFiberExample = () => {
     return (
         <>
             <div className="title">
-                <h1>The Milky Way</h1>
+                <h1>The Solar System</h1>
             </div>
 
             { selected && (
