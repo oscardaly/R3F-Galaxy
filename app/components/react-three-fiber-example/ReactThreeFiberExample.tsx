@@ -10,15 +10,18 @@ import {RocketLaunchIcon} from "@heroicons/react/24/solid";
 import {ArrowLongRightIcon} from "@heroicons/react/24/outline";
 import TableRow from "@/app/components/react-three-fiber-example/components/TableRow";
 import {Seat} from "@/app/components/react-three-fiber-example/components/planet/types/Seat";
+import LeftWall from "@/app/components/react-three-fiber-example/components/LeftWall";
+import RightWall from "@/app/components/RightWall";
+import Floor from "@/app/components/Floor";
 
 
 
 const Lights = () => {
     return (
         <>
-            <Stars/>
-            <ambientLight intensity={3}/>
-            <pointLight position={[0, 0, 0]}/>
+            {/*<Stars/>*/}
+            <ambientLight intensity={2}/>
+            {/*<pointLight position={[0, 0, 0]}/>*/}
         </>
     );
 }
@@ -29,17 +32,16 @@ export const ReactThreeFiberExample = () => {
     return (
         <>
             <div className="title">
-                <h1>The Milky Way</h1>
+                <h1>Instil's Office</h1>
             </div>
 
             {selected && (
                 <div className="infoDiv">
-                    <RocketLaunchIcon className="text-blue-500 w-12 h-12"/>
-                    <h1>Name: <b>{selected.location.x}</b></h1>
-                    <h1>Speed: <b>{selected.faceForward}</b></h1>
+                    <h1>Desk Selected: <b>{selected.location.x}</b></h1>
+                    <h1>Date: <b>21/10/23</b></h1>
                     <a href="#" className="inline-block">
                         <Button size="sm" variant="text" className="flex items-center gap-2">
-                            Learn More
+                            Book desk
                             <ArrowLongRightIcon strokeWidth={2} className="w-4 h-4"/>
                         </Button>
                     </a>
@@ -50,9 +52,9 @@ export const ReactThreeFiberExample = () => {
                 <Lights/>
                 <Selection>
                     <TableRow onClick={setSelected}/>
-                    <EffectComposer multisampling={8} autoClear={false}>
-                        <Outline blur visibleEdgeColor={0xffffff} edgeStrength={100} width={1000}/>
-                    </EffectComposer>
+                    {/*<EffectComposer multisampling={8} autoClear={false}>*/}
+                    {/*    <Outline blur visibleEdgeColor={0xffffff} edgeStrength={100} width={1000}/>*/}
+                    {/*</EffectComposer>*/}
                 </Selection>
                 <LeftWall/>
                 <RightWall/>
