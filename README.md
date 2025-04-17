@@ -1,34 +1,53 @@
 # Building Interactive 3D Web Applications with React-Three-Fiber
 
-## Objective
+This project demonstrates an interactive 3D model of the solar system built with Next.js, React Three Fiber, and Three.js. It showcases how to create interactive 3D web components rendered in the browser.
 
-The objective of this workshop is to provide an introductory overview of building interactive 3D web experiences using Three.js and React-Three-Fiber. Participants will gain a basic understanding of the concepts and tools involved in creating 3D web applications.
+## Features
 
-## Exercises
+*   Displays the Sun and planets of our solar system in 3D space.
+*   Planets orbit the Sun along their respective paths.
+*   Hovering over a planet highlights it with an outline and pauses its orbital motion.
+*   Clicking on a planet displays basic information about it (Name, Orbital Speed, Color).
+*   Interactive camera controls ([`OrbitControls`](app/components/react-three-fiber-example/ReactThreeFiberExample.tsx)) allow users to zoom (scroll) and pan (drag) the view.
+*   Uses postprocessing effects ([`Outline`](app/components/react-three-fiber-example/ReactThreeFiberExample.tsx)) for highlighting selected objects.
 
-1. Introduction to Three.js (30 minutes)
-- Overview of Three.js and its role in creating 3D web applications
-- Explanation of key concepts such as scenes, cameras, and renderers
-- Demonstrating a simple Three.js scene with basic shapes and materials
-- Understanding how to manipulate and animate objects in Three.js
-- Introduction to available resources and documentation for further learning
+## Technologies Used
 
-2. Building a Simple 3D Scene with React-Three-Fiber (30 minutes)
-- Introduction to React-Three-Fiber and its benefits for creating 3D web applications
-- Setting up a React project with React-Three-Fiber
-- Creating a basic 3D scene using React-Three-Fiber components
-- Adding interactivity and animation to the scene
-- Exploring the possibilities of customizing the scene with React components
-- Recommended resources for further learning
-
-3. Open discussion and Q&A session to address participants' questions
-- Recap of the key concepts covered in the workshop
-- Suggestions and next steps for participants to continue their learning journey
-- Feedback and closing remarks
+*   [Next.js](https://nextjs.org/)
+*   [React](https://reactjs.org/)
+*   [React Three Fiber](https://docs.pmnd.rs/react-three-fiber/getting-started/introduction)
+*   [Three.js](https://threejs.org/)
+*   [TypeScript](https://www.typescriptlang.org/)
+*   [Tailwind CSS](https://tailwindcss.com/)
+*   [@react-three/drei](https://github.com/pmndrs/drei) (Helpers for React Three Fiber)
+*   [@react-three/postprocessing](https://github.com/pmndrs/postprocessing) (Postprocessing effects)
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+*   Node.js (v16 or later recommended)
+*   npm, yarn, or pnpm
+
+### Installation
+
+1.  Clone the repository:
+    ```bash
+    git clone <your-repository-url>
+    cd <repository-directory>
+    ```
+2.  Install dependencies:
+    ```bash
+    npm install
+    # or
+    yarn install
+    # or
+    pnpm install
+    ```
+
+### Running the Development Server
+
+Run the development server:
 
 ```bash
 npm run dev
@@ -36,10 +55,3 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.

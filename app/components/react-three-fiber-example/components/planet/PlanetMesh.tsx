@@ -1,6 +1,6 @@
 import React, {FC, useCallback, useState, useRef} from "react";
 import {useFrame} from "@react-three/fiber";
-import {Edges, Html} from "@react-three/drei";
+import {Html} from "@react-three/drei";
 import * as THREE from "three";
 import {Planet} from "@/app/components/react-three-fiber-example/components/planet/types/Planet";
 import {OnClick} from "@/app/components/react-three-fiber-example/components/planet/types/Callbacks";
@@ -19,6 +19,7 @@ export const PlanetMesh: FC<PlanetProps> = (
         orbitalSpeed,
         offset,
         rotationalSpeed,
+        extraInfoUrl,
         onClick
     }
 ) => {
@@ -44,7 +45,8 @@ export const PlanetMesh: FC<PlanetProps> = (
             colour,
             offset,
             rotationalSpeed,
-            orbitalSpeed
+            orbitalSpeed,
+            extraInfoUrl
         });
     }, [])
 

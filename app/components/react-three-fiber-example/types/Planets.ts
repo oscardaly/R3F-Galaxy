@@ -18,7 +18,8 @@ export const planets: Planets = {
         colour: "grey",
         orbitalSpeed: 0.5,
         offset: 40,
-        rotationalSpeed: 1
+        rotationalSpeed: 1,
+        extraInfoUrl: "https://science.nasa.gov/mercury/facts/"
     },
    venus: {
        name: "Venus",
@@ -26,7 +27,8 @@ export const planets: Planets = {
        colour: "orange",
        orbitalSpeed: 0.75,
        offset: 80,
-       rotationalSpeed: 1
+       rotationalSpeed: 1,
+       extraInfoUrl: "https://science.nasa.gov/venus/venus-facts/"
    },
    earth: {
        name: "Earth",
@@ -34,7 +36,8 @@ export const planets: Planets = {
        colour: "green",
        orbitalSpeed: 0.5,
        offset: 120,
-       rotationalSpeed: 1
+       rotationalSpeed: 1,
+       extraInfoUrl: "https://science.nasa.gov/earth/facts/"
    },
     mars: {
         name: "Mars",
@@ -42,7 +45,8 @@ export const planets: Planets = {
         colour: "orange",
         orbitalSpeed: 1,
         offset: 160,
-        rotationalSpeed: 1
+        rotationalSpeed: 1,
+        extraInfoUrl: "https://science.nasa.gov/mars/facts/"
     },
     jupiter: {
         name: "Jupiter",
@@ -50,7 +54,8 @@ export const planets: Planets = {
         colour: "yellow",
         orbitalSpeed: 0.75,
         offset: 200,
-        rotationalSpeed: 1
+        rotationalSpeed: 1,
+        extraInfoUrl: "https://science.nasa.gov/jupiter/facts/"
     },
     saturn: {
         name: "Saturn",
@@ -58,7 +63,8 @@ export const planets: Planets = {
         colour: "grey",
         orbitalSpeed: 0.5,
         offset: 220,
-        rotationalSpeed: 1
+        rotationalSpeed: 1,
+        extraInfoUrl: "https://science.nasa.gov/saturn/facts/"
     },
     uranus: {
         name: "Uranus",
@@ -66,7 +72,8 @@ export const planets: Planets = {
         colour: "turquoise",
         orbitalSpeed: 1,
         offset: 260,
-        rotationalSpeed: 1
+        rotationalSpeed: 1,
+        extraInfoUrl: "https://science.nasa.gov/uranus/facts/"
     },
     neptune: {
         name: "Neptune",
@@ -74,6 +81,7 @@ export const planets: Planets = {
         colour: "blue",
         orbitalSpeed: 0.75,
         offset: 300,
-        rotationalSpeed: 1
+        rotationalSpeed: 1,
+        extraInfoUrl: "https://science.nasa.gov/neptune/facts/"
     }
 };

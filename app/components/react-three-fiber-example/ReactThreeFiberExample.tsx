@@ -13,6 +13,7 @@ import {
 } from "@material-tailwind/react";
 import {RocketLaunchIcon} from "@heroicons/react/24/solid";
 import {ArrowLongRightIcon} from "@heroicons/react/24/outline";
+import Link from 'next/link';
 
 const Sun = () => {
     return (
@@ -33,27 +34,29 @@ const Lights = () => {
 }
 
 export const ReactThreeFiberExample = () => {
-    const [selected, setSelected] = useState<Planet | undefined>(planets.saturn);
+    const [selected, setSelected] = useState<Planet | undefined>(undefined);
 
     return (
         <>
-            <div className="title">
-                <h1>The Solar System</h1>
+            <div className="title flex flex-col">
+                <h1 className="text-5xl font-bold">The Milky Way Galaxy</h1>
+                <p>Try out my React Three Fiber Example below!</p>
+                <p>1. Hover over a planet to show a border and stop the planet</p>
+                <p>2. Click a planet to show the information about it</p>
+                <p>3. Scroll up and down to zoom in and out of the canvas</p>
+                <p>4. Drag the rings to alter your view</p>
             </div>
 
             { selected && (
+                <Link href={selected.extraInfoUrl}>
                 <div className="infoDiv">
-                    <RocketLaunchIcon className="text-blue-500 w-12 h-12"/>
-                    <h1>Name: <b>{selected.name}</b></h1>
-                    <h1>Speed: <b>{selected.orbitalSpeed}</b></h1>
-                    <h1>Colour: <b>{selected.colour}</b></h1>
-                    <a href="#" className="inline-block">
-                        <Button size="sm" variant="text" className="flex items-center gap-2">
-                            Learn More
-                            <ArrowLongRightIcon strokeWidth={2} className="w-4 h-4"/>
-                        </Button>
-                    </a>
+                    <RocketLaunchIcon className="text-grey w-12 h-12"/>
+                    <h1 className='font-semibold text-lg'>Speed: <b>{selected.orbitalSpeed}</b></h1>
+                    <h1 className='font-semibold text-3xl'>{selected.name}</h1>
+                    <h1 className='font-normal'>Colour: <b>{selected.colour}</b></h1>   
+                    <p>Click for more info!</p>  
                 </div>
+                </Link>
             )}
 
             <Canvas camera={{position: [0, 40, 110], fov: 25}}>

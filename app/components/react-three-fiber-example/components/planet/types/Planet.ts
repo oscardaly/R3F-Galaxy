@@ -5,4 +5,5 @@ export interface Planet {
     orbitalSpeed: number;
     offset: number;
     rotationalSpeed: number;
+    extraInfoUrl: string;
 }

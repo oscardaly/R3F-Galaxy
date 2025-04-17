@@ -40,12 +40,11 @@ html {
   align-items: center;
   justify-content: center;
   display: flex;
+  z-index: 1;
 }
 
 .title {
   color: white;
-  text-align: center;
-  font-size: 3rem;
   position: absolute;
   top: 20px;
   left: 20px;
