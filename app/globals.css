@@ -43,6 +43,12 @@ html {
   z-index: 1;
 }
 
+.infoDiv:hover { 
+  background: black;
+  border: 1px solid white;
+  color: white;
+}
+
 .title {
   color: white;
   position: absolute;

@@ -1,6 +1,6 @@
 import React, {FC, useCallback, useState, useRef} from "react";
 import {useFrame} from "@react-three/fiber";
-import {Html} from "@react-three/drei";
+import {Html, Line} from "@react-three/drei";
 import * as THREE from "three";
 import {Planet} from "@/app/components/react-three-fiber-example/components/planet/types/Planet";
 import {OnClick} from "@/app/components/react-three-fiber-example/components/planet/types/Callbacks";
@@ -81,11 +81,8 @@ const Ecliptic = ({xRadius = 1, zRadius = 1}) => {
     }
 
     points.push(points[0]);
-    const lineGeometry = new THREE.BufferGeometry().setFromPoints(points);
 
     return (
-        <line geometry={lineGeometry}>
-            <lineBasicMaterial attach="material" color="#BFBBDA" linewidth={10}/>
-        </line>
+        <Line points={points} color="#BFBBDA" lineWidth={1} />
     );
 }

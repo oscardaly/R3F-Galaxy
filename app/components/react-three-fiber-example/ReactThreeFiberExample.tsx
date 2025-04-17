@@ -48,7 +48,7 @@ export const ReactThreeFiberExample = () => {
             </div>
 
             { selected && (
-                <Link href={selected.extraInfoUrl}>
+                <Link href={selected.extraInfoUrl} target="_blank">
                 <div className="infoDiv">
                     <RocketLaunchIcon className="text-grey w-12 h-12"/>
                     <h1 className='font-semibold text-lg'>Speed: <b>{selected.orbitalSpeed}</b></h1>
