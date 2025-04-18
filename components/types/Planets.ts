@@ -1,4 +1,4 @@
-import {Planet} from "@/app/components/react-three-fiber-example/components/planet/types/Planet";
+import {Planet} from "@/components/planet/types/Planet";
 
 export interface Planets {
     mercury: Planet;

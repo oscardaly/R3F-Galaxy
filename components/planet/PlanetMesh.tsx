@@ -1,9 +1,10 @@
+"use client"
 import React, {FC, useCallback, useState, useRef} from "react";
 import {useFrame} from "@react-three/fiber";
 import {Html, Line} from "@react-three/drei";
 import * as THREE from "three";
-import {Planet} from "@/app/components/react-three-fiber-example/components/planet/types/Planet";
-import {OnClick} from "@/app/components/react-three-fiber-example/components/planet/types/Callbacks";
+import {Planet} from "@/components/planet/types/Planet";
+import {OnClick} from "@/components/planet/types/Callbacks";
 import {Select} from "@react-three/postprocessing";
 import {Mesh} from "three";
 

@@ -4,15 +4,11 @@ import {Canvas} from '@react-three/fiber'
 import {OrbitControls} from '@react-three/drei'
 import {Selection, EffectComposer, Outline} from '@react-three/postprocessing'
 
-import {planets} from "@/app/components/react-three-fiber-example/types/Planets";
-import {Planet} from "@/app/components/react-three-fiber-example/components/planet/types/Planet";
-import {PlanetMesh} from "@/app/components/react-three-fiber-example/components/planet/PlanetMesh";
+import {planets} from "@/components/types/Planets";
+import {Planet} from "@/components/planet/types/Planet";
+import {PlanetMesh} from "@/components/planet/PlanetMesh";
 
-import {
-    Button,
-} from "@material-tailwind/react";
 import {RocketLaunchIcon} from "@heroicons/react/24/solid";
-import {ArrowLongRightIcon} from "@heroicons/react/24/outline";
 import Link from 'next/link';
 
 const Sun = () => {
@@ -48,7 +44,7 @@ export const ReactThreeFiberExample = () => {
             </div>
 
             { selected && (
-                <Link href={selected.extraInfoUrl} target="_blank">
+                <Link href={selected.extraInfoUrl ?? "#"} target="_blank">
                 <div className="infoDiv">
                     <RocketLaunchIcon className="text-grey w-12 h-12"/>
                     <h1 className='font-semibold text-lg'>Speed: <b>{selected.orbitalSpeed}</b></h1>
