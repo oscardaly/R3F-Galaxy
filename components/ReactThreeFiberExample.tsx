@@ -36,23 +36,30 @@ const Lights = () => {
 export const ReactThreeFiberExample = () => {
     const [selected, setSelected] = useState<Planet | undefined>(undefined);
 
+    // Client-only (this component is loaded with ssr: false), so window is safe.
+    // On narrow screens the orbits run off the sides, so pull the camera back.
+    const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+    const camera: { position: [number, number, number]; fov: number } = isMobile
+        ? { position: [0, 95, 300], fov: 32 }
+        : { position: [0, 40, 110], fov: 25 };
+
     return (
         <>
             <div className="vignette" />
 
             {/* Header */}
-            <header className="pointer-events-none absolute left-6 top-6 z-10 max-w-sm">
+            <header className="pointer-events-none absolute left-4 top-4 z-10 max-w-[78%] sm:left-6 sm:top-6 sm:max-w-sm">
                 <p className="eyebrow">Interactive &middot; WebGL</p>
-                <h1 className="mt-2 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+                <h1 className="mt-2 text-2xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">
                     The Milky Way Galaxy
                 </h1>
-                <p className="mt-3 max-w-xs text-sm leading-relaxed text-zinc-400">
+                <p className="mt-2 max-w-xs text-xs leading-relaxed text-zinc-400 sm:mt-3 sm:text-sm">
                     A real-time solar system, rendered in the browser with React Three Fiber.
                 </p>
             </header>
 
-            {/* Controls legend */}
-            <div className="glass animate-in pointer-events-none absolute bottom-6 left-6 z-10 rounded-2xl px-4 py-3">
+            {/* Controls legend — hidden on mobile, where touch is the obvious interaction */}
+            <div className="glass animate-in pointer-events-none absolute bottom-6 left-6 z-10 hidden rounded-2xl px-4 py-3 sm:block">
                 <p className="eyebrow mb-2">Controls</p>
                 <ul className="space-y-1 text-xs text-zinc-300">
                     <li><span className="font-medium text-white">Hover</span> a planet to focus it</li>
@@ -61,9 +68,9 @@ export const ReactThreeFiberExample = () => {
                 </ul>
             </div>
 
-            {/* Selected-planet card */}
+            {/* Selected-planet card — full-width sheet on mobile, top-right card on desktop */}
             {selected && (
-                <aside className="glass animate-in absolute right-6 top-6 z-10 w-72 rounded-2xl p-5">
+                <aside className="glass animate-in absolute inset-x-4 bottom-4 z-10 rounded-2xl p-5 sm:inset-x-auto sm:bottom-auto sm:right-6 sm:top-6 sm:w-72">
                     <button
                         onClick={() => setSelected(undefined)}
                         aria-label="Close"
@@ -100,12 +107,12 @@ export const ReactThreeFiberExample = () => {
                 </aside>
             )}
 
-            {/* Footer credit */}
-            <p className="pointer-events-none absolute bottom-6 right-6 z-10 text-xs text-zinc-500">
+            {/* Footer credit — hidden on mobile to keep the small screen clean */}
+            <p className="pointer-events-none absolute bottom-6 right-6 z-10 hidden text-xs text-zinc-500 sm:block">
                 Built by Oscar Daly
             </p>
 
-            <Canvas camera={{ position: [0, 40, 110], fov: 25 }} dpr={[1, 2]}>
+            <Canvas camera={camera} dpr={[1, 2]}>
                 <Lights />
                 <Stars radius={300} depth={80} count={6000} factor={6} saturation={0} fade speed={0.6} />
                 <Selection>

@@ -24,13 +24,20 @@ body {
     #05060a;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  overscroll-behavior: none;
 }
 
 .body {
   position: relative;
   height: 100vh;
+  height: 100dvh; /* avoid the mobile URL-bar gap */
   width: 100%;
   overflow: hidden;
+}
+
+/* Let OrbitControls own touch gestures rather than the browser scrolling/zooming. */
+canvas {
+  touch-action: none;
 }
 
 /* Soft vignette for depth — sits above the canvas, below the UI. */
